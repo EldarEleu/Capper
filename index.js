@@ -15,8 +15,10 @@ var MongoClient = require("mongodb").MongoClient
 var ObjectId = require("mongodb").ObjectID
 var url = "mongodb://127.0.0.1:27017"
 
+const port = process.env.PORT || 1337
+
 app.use(bodyParser.json());
-app.listen(1337, () => {
+app.listen(PORT, () => {
     console.log("Server listening on port 1337")
 })
 
